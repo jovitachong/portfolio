@@ -1,12 +1,14 @@
 import React, { useState, useRef } from 'react';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
+import emailIcon from '../../assets/email.png';
+import linkedinIcon from '../../assets/linkedin.png';
 
 const Contact = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
-  const formRef = useRef();
+  const form = useRef();
 
   const validateForm = () => {
     let isValid = true;
@@ -39,7 +41,7 @@ const Contact = () => {
     if (!validateForm()) return;
 
     // Use the form ref to access the form element
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'ACTUAL_USER_ID_FROM_EMAILJS')
+    emailjs.sendForm('service_msfrwsu', 'template_4vtu98c', form.current, 'TmmiWDhwDIr6_CE-G')
       .then((result) => {
           console.log('Email successfully sent!', result.text);
           setFullName('');
@@ -58,20 +60,17 @@ const Contact = () => {
 
       <div className="contact-info-upper-container">
         <div className="contact-info-container">
-          <img src="./img/email.png" alt="Email icon" className="icon contact-info email-icon" />
+          <img src={emailIcon} alt="Email icon" className="icon contact-info email-icon" />
           <p><a href="mailto:jovitaachong@gmail.com">jovitaachong@gmail.com</a></p>
         </div>
 
         <div className="contact-info-container">
-          <img src="./img/linkedin.png" alt="LinkedIn icon" className="icon contact-info" />
+          <img src={linkedinIcon} alt="LinkedIn icon" className="icon contact-info" />
           <p><a href="https://www.linkedin.com/in/jovitachong/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
       </div>
 
-      {/* <form className="contact--form--container" onSubmit={sendEmail} ref={formRef}> */}
-      {/* <form className="contact--form--container" onSubmit={sendEmail} ref={formRef}> */}
-      <form action="https://formsubmit.co/jovitaachong@email.com" method="POST" />
-
+      <form className="contact--form--container" onSubmit={sendEmail} ref={form}>
         <div className="contact--container">
 
           {/* Full Name Field */}
@@ -80,7 +79,8 @@ const Contact = () => {
             <input
               type="text"
               className="contact--input text-md"
-              name="full-name"
+              // name="full-name"
+              name="user_name"
               id="full-name"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -95,7 +95,8 @@ const Contact = () => {
             <input
               type="email"
               className="contact--input text-md"
-              name="email"
+              // name="email"
+              name="user_email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -110,6 +111,7 @@ const Contact = () => {
             <textarea
               className="contact--input text-md"
               id="message"
+              name="message"
               rows="8"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -124,7 +126,7 @@ const Contact = () => {
             </button>
           </div>
         </div>
-      {/* </form> */}
+      </form>
     </section>
   );
 };

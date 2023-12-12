@@ -1,10 +1,18 @@
 import React from 'react';
+import profilePicture from '../../assets/profile-pic_JovitaChong.png';
+import linkedinPicture from '../../assets/linkedin.png';
+import githubPicture from '../../assets/github.png';
+import resumePDF from '../../assets/Resume_JovitaChong.pdf';
 
 const HeroSection = () => {
   return (
     <section id="profile">
       <div className="section__pic-container">
-        <img src="./img/profile-pic-JovitaChong.png" alt="Jovita Chong's Profile" style={{ borderRadius: '50%' }} />
+        <img
+          src={profilePicture}
+          alt="Jovita Chong's Profile"
+          style={{ borderRadius: '50%' }}
+        />
       </div>
       <div className="section__text">
         <p className="section__text__p2">👋&nbsp;&nbsp;Hello!</p>
@@ -13,8 +21,7 @@ const HeroSection = () => {
           Welcome to my portfolio.
         </p>
         <div className="btn-container">
-          {/* todo */}
-          <button className="btn btn-color-2" onClick={() => window.open('/img/resume-example.pdf')}>
+          <button className="btn btn-color-2" onClick={() => window.open(resumePDF)}>
             Download CV
           </button>
           <button className="btn btn-color-1" onClick={() => window.location.href='./contact'}>
@@ -25,12 +32,12 @@ const HeroSection = () => {
           {/* todo: change icon to svg bcs v pixelated */}
           <li>
             <a href="https://www.linkedin.com/in/jovitachong/" target="_blank" title="Connect with me on Linkedin" rel="noopener noreferrer">
-              <img src="/img/linkedin.png" alt="Jovita Chong's LinkedIn Profile" className="icon" />
+              <img src={linkedinPicture} alt="Jovita Chong's LinkedIn Profile" className="icon" />
             </a>
           </li>
           <li>
             <a href="https://github.com/jovitachong/" target="_blank" title="Visit my GitHub" rel="noopener noreferrer">
-              <img src="/img/github.png" alt="Jovita Chong's GitHub Profile" className="icon" />
+              <img src={githubPicture} alt="Jovita Chong's GitHub Profile" className="icon" />
             </a>
           </li>
         </ul>

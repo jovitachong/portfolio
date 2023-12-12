@@ -6,7 +6,8 @@ const project= () => {
       <p className="section__text__p1">Browse My Recent</p>
       <h1 className="title">Project</h1>
 
-      <div className="experience-details-container">
+      <h2 style={{textAlign: 'center'}}>Coming Soon</h2>
+      {/* <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container color-container">
             <div className="article-container">
@@ -39,7 +40,7 @@ const project= () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* todo */}
       {/* <img src="./assets/arrow.png" alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='/#contact'} /> */}
     </section>
