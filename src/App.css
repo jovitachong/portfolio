@@ -232,7 +232,7 @@ section {
 
 .arrow {
   position: absolute;
-  right: -15%;
+  /* right: -15%; */
   bottom: -10%;
 }
 
@@ -372,6 +372,16 @@ section {
   border: 1.333px solid rgb(163, 163, 163);
   background: var(--white);
   margin-bottom: 32px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-top: -32px;
+  margin-bottom: 25px;
+  /* Adjust the margin for proper spacing */
 }
 
 /* Footer Starts */

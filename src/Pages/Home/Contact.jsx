@@ -1,7 +1,25 @@
 import React, { useState, useRef } from 'react';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
 import emailjs from 'emailjs-com';
 import emailIcon from '../../assets/email.png';
 import linkedinIcon from '../../assets/linkedin.png';
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+}));
 
 const Contact = () => {
   const [fullName, setFullName] = useState('');
@@ -9,6 +27,18 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
   const form = useRef();
+
+  const [open, setOpen] = useState(false);
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  const handleClose = () => {
+    setOpen(false);
+
+    setFullName('');
+    setEmail('');
+    setMessage('');
+  };
 
   const validateForm = () => {
     let isValid = true;
@@ -40,13 +70,9 @@ const Contact = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Use the form ref to access the form element
     emailjs.sendForm('service_msfrwsu', 'template_4vtu98c', form.current, 'TmmiWDhwDIr6_CE-G')
       .then((result) => {
-          console.log('Email successfully sent!', result.text);
-          setFullName('');
-          setEmail('');
-          setMessage('');
+          setOpen(true);
       }, (error) => {
           console.log('Failed to send email.', error.text);
       });
@@ -120,13 +146,45 @@ const Contact = () => {
             {errors.message && <p className="error-message">{errors.message}</p>}
           </label>
 
-          <div>
+          <div style={{display: "flex", justifyContent: "center"}}>
             <button className="btn btn-color-2 project-btn" onClick={sendEmail}>
               Submit
             </button>
           </div>
         </div>
       </form>
+
+      <React.Fragment>
+        <BootstrapDialog
+          onClose={handleClose}
+          aria-labelledby="customized-dialog-title"
+          open={open}
+        >
+          <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+            Message Sent!
+          </DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <DialogContent dividers>
+            Thank you for reaching out, {fullName}! I appreciate it. You can expect a response from me within the next 24 hours. Talk to you soon!
+          </DialogContent>
+          <DialogActions>
+            <div onClick={handleClose} className="navbar--content" style={{ color: "black", padding: "8px", fontWeight: 500}}>
+              Got it
+            </div>
+          </DialogActions>
+        </BootstrapDialog>
+      </React.Fragment>
     </section>
   );
 };

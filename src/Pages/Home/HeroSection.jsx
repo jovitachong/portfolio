@@ -5,6 +5,7 @@ import profilePicture from '../../assets/profile-pic_JovitaChong.png';
 import linkedinPicture from '../../assets/linkedin.png';
 import githubPicture from '../../assets/github.png';
 import resumePDF from '../../assets/Resume_JovitaChong.pdf';
+import arrow from '../../assets/arrow.png';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const HeroSection = () => {
         </ul>
       </div>
       {/* todo */}
-      {/* <img src="/img/arrow.png" alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='/#about'} /> */}
+      {/* <img src={arrow} alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='/#project'} /> */}
     </section>
   );
 };
