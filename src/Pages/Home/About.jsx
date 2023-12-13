@@ -34,14 +34,12 @@ const About = () => {
 
           <div className="text-container">
             <p>
-             A recent graduate from the University of New South Wales (UNSW) with a Bachelor of
-              Commerce (FinTech) and a Bachelor of Science
-              (Computer Science), based in Sydney.
+             A recent graduate from the University of New South Wales (UNSW) with a Bachelor of Commerce in FinTech and a Bachelor of Science in Computer Science, based in Sydney 🦘🇦🇺.
             </p>
           </div>
         </div>
       </div>
-      <img src="./img/arrow.png" alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='/#experience'} />
+      {/* <img src="./img/arrow.png" alt="Arrow icon" className="icon arrow" onClick={() => window.location.href='/#experience'} /> */}
       </section>
   );
 };
