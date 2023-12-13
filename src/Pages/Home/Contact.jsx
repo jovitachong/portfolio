@@ -148,6 +148,7 @@ const Contact = () => {
 
           <div style={{display: "flex", justifyContent: "center"}}>
             <button className="btn btn-color-2 project-btn" onClick={sendEmail}>
+            {/* <button className="btn contact--input text-md" onClick={sendEmail}> */}
               Submit
             </button>
           </div>
