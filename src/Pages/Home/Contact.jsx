@@ -90,10 +90,10 @@ const Contact = () => {
           <p><a href="mailto:jovitaachong@gmail.com">jovitaachong@gmail.com</a></p>
         </div>
 
-        <div className="contact-info-container">
+        {/* <div className="contact-info-container">
           <img src={linkedinIcon} alt="LinkedIn icon" className="icon contact-info" />
           <p><a href="https://www.linkedin.com/in/jovitachong/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-        </div>
+        </div> */}
       </div>
 
       <form className="contact--form--container" onSubmit={sendEmail} ref={form}>

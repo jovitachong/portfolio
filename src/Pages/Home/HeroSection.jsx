@@ -35,7 +35,6 @@ const HeroSection = () => {
         </div>
         <ul className="socials-container-links">
           {/* todo: decide which one's are important */}
-          {/* todo: change icon to svg bcs v pixelated */}
           <li>
             <a href="https://www.linkedin.com/in/jovitachong/" target="_blank" title="Connect with me on Linkedin" rel="noopener noreferrer">
               <img src={linkedinPicture} alt="Jovita Chong's LinkedIn Profile" className="icon" />
