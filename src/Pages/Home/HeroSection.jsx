@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import profilePicture from '../../assets/profile-pic_JovitaChong.png';
 import linkedinPicture from '../../assets/linkedin.png';
 import githubPicture from '../../assets/github.png';
 import resumePDF from '../../assets/Resume_JovitaChong.pdf';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="profile">
       <div className="section__pic-container">
@@ -24,11 +28,12 @@ const HeroSection = () => {
           <button className="btn btn-color-2" onClick={() => window.open(resumePDF)}>
             Download CV
           </button>
-          <button className="btn btn-color-1" onClick={() => window.location.href='./contact'}>
+          <button className="btn btn-color-1" onClick={() => navigate('/contact')}>
             Contact Info
           </button>
         </div>
         <ul className="socials-container-links">
+          {/* todo: decide which one's are important */}
           {/* todo: change icon to svg bcs v pixelated */}
           <li>
             <a href="https://www.linkedin.com/in/jovitachong/" target="_blank" title="Connect with me on Linkedin" rel="noopener noreferrer">

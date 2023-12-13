@@ -73,8 +73,6 @@ h2 {
   height: 10vh;
   padding: 15px 5%;
   background-color: white;
-  /* delete */
-  /* background-color: pink; */
   position: fixed;
   z-index: 1000;
 }
@@ -254,6 +252,7 @@ section {
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.5s;
+  text-decoration: none;
 }
 
 .btn-color-1 {
@@ -644,12 +643,12 @@ section {
     justify-content: center;
     background-color: rgba(255, 255, 255);
     top: -20rem;
-    /* top: 20rem; */
     left: 0;
     width: 100%;
     transition: all ease-in-out 0.5s;
     position: absolute;
     z-index: 999;
+    /* background-color: pink; */
   }
 
   .navbar--items ul {
@@ -673,7 +672,7 @@ section {
   }
 
   .navbar--items.active {
-    top: calc(30px + 73.125px + 1.25px + 47px);
+    top: calc(30px + 89.594px + 1px);
     padding-bottom: 30px;
     /* background-color: pink; */
   }
