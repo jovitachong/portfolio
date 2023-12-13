@@ -1,6 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-// import React, { useState, useEffect } from 'react';
 import React from 'react';
+
+import educationIcon from '../../assets/education.png'
+import aboutMe from '../../assets/aboutMe.png'
+
 
 const About = () => {
   return (
@@ -11,22 +13,22 @@ const About = () => {
       <div className="section-container">
         {/* picture container */}
         <div className="section__pic-container">
-          <img src="./img/about-pic.png" alt="Profile" className="about-pic" />
+          <img src={aboutMe} alt="Profile" className="about-pic" />
         </div>
         {/* about details container */}
         <div className="about-details-container">
           <div className="about-containers">
 
-            <div className="details-container">
+            {/* <div className="details-container">
               <img src="./img/experience.png" alt="Experience Icon" className="icon" />
               <h3>Experience</h3>
               <p>2+ years <br />Frontend Development</p>
-            </div>
+            </div> */}
 
             <div className="details-container">
-              <img src="./img/education.png" alt="Education Icon" className="icon" />
+              <img src={educationIcon} alt="Education Icon" className="icon" />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <p>B.Sc. Bachelors Degree<br /></p>
             </div>
           </div>
 
