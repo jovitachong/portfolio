@@ -3,10 +3,12 @@ import React from 'react';
 const project= () => {
   return (
     <section id="project">
+      console.log('hiii')
       <p className="section__text__p1">Browse My Recent</p>
       <h1 className="title">Project</h1>
 
       <h2 style={{textAlign: 'center'}}>Coming Soon</h2>
+
       {/* <div className="experience-details-container">
         <div className="about-containers">
           <div className="details-container color-container">
