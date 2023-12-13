@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import profilePicture from '../../assets/profile-pic_JovitaChong.png';
+import profilePicture from '../../assets/profile-pic.jpeg';
 import linkedinPicture from '../../assets/linkedin.png';
 import githubPicture from '../../assets/github.png';
 import resumePDF from '../../assets/Resume_JovitaChong.pdf';

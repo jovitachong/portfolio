@@ -193,6 +193,7 @@ section {
 
 .section__pic-container {
   display: flex;
+  margin: 2rem auto;
   /* width: 60vw;
   height: 60vw;
   margin: auto 0; */
@@ -336,6 +337,7 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .about-pic {
@@ -591,7 +593,8 @@ article .icon {
 }
 
 .divider {
-  margin: 106px 0 42.67px;
+  /* margin: 0 5%; */
+  margin-bottom: 2rem;
   height: 1.333px;
   width: 100%;
   background: rgba(40, 41, 56, 0.55);
@@ -665,6 +668,10 @@ article .icon {
 /* Responsive Screens */
 
 @media only screen and (max-width: 1600px) {
+  .about-containers {
+    flex-wrap: wrap;
+  }
+
   .skills--section--heading {
     font-size: 54px;
     line-height: 70px;
@@ -778,9 +785,9 @@ article .icon {
     align-items: center;
   }
 
-  .divider {
+  /* .divider {
     margin: 20px;
-  }
+  } */
 }
 
 /* Hamburger menu  */
@@ -850,40 +857,9 @@ article .icon {
   .navbar--items.active {
     top: calc(30px + 89.594px + 1px);
     padding-bottom: 30px;
-    /* background-color: pink; */
   }
 
   /* HAMBURGER TRANSITION */
-
-  /* @keyframes rotateToX {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(45deg) translate(3.5px, -3.5px);
-    }
-  }
-
-  @keyframes rotateToHamburger {
-    0% {
-      transform: rotate(45deg) translate(3.5px, -3.5px);
-    }
-
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
-  @keyframes rotateToHamburgerLastSpan {
-    0% {
-      transform: rotate(-45deg) translate(3.5px, 3.5px);
-    }
-
-    100% {
-      transform: rotate(0deg);
-    }
-  } */
 
   .nav__hamburger.active :nth-child(1) {
     transform: rotate(45deg) translate(0.45rem, 0.1875rem);
@@ -895,6 +871,21 @@ article .icon {
 
   .nav__hamburger.active :nth-child(3) {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  /* about */
+  .section-container {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .section__pic-container {
+    margin: 2rem auto;
+    /* margin: 0 auto; */
+    justify-content: center;
   }
 }
 
