@@ -270,6 +270,7 @@ section {
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
   background: none;
+  color: black;
 }
 
 .btn-color-2:hover {
