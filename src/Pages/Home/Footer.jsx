@@ -39,7 +39,9 @@ function Footer() {
           </li>
         </ul>
 
-        <p className="footer--content">Copyright © 2023 Made and designed by Jovita Chong.</p>
+        <p className="footer--content footer-large">Copyright © 2023 Made and designed by Jovita Chong.</p>
+        <p className="footer--content footer-small">Copyright © 2023 Jovita Chong.</p>
+
         <p className="footer--content">All Rights Reserved.</p>
       </div>
 
