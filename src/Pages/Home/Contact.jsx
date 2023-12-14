@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -10,7 +9,6 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import emailjs from 'emailjs-com';
 import emailIcon from '../../assets/email.png';
-import linkedinIcon from '../../assets/linkedin.png';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -29,12 +27,8 @@ const Contact = () => {
   const form = useRef();
 
   const [open, setOpen] = useState(false);
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
   const handleClose = () => {
     setOpen(false);
-
     setFullName('');
     setEmail('');
     setMessage('');
