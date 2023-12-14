@@ -138,7 +138,7 @@ const Contact = () => {
               className="contact--input text-md"
               id="message"
               name="message"
-              rows="8"
+              rows="6"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Type your message..."
