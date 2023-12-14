@@ -73,7 +73,7 @@ function Navbar() {
                 duration={500}
                 className="navbar--content"
               >
-                Experience
+                Skills
               </NavLink>
             </li>
             <li>
@@ -87,7 +87,7 @@ function Navbar() {
                 duration={500}
                 className="navbar--content"
               >
-                Project
+                Projects
               </NavLink>
             </li>
             <li>

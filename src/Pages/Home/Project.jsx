@@ -5,7 +5,7 @@ const project= () => {
     <section id="project">
       {/* console.log('hiii') */}
       <p className="section__text__p1">Browse My Recent</p>
-      <h1 className="title">Project</h1>
+      <h1 className="title">Projects</h1>
 
       <h2 style={{textAlign: 'center'}}>Coming Soon</h2>
 
