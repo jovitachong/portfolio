@@ -220,6 +220,7 @@ section {
 
 .section__text {
   /* padding: 0 5%; */
+  width: 50%;
   align-self: center;
   text-align: center;
 }
@@ -386,6 +387,7 @@ section {
 .section__pic-container {
   /* height: 400px;
   width: 400px; */
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -458,7 +460,7 @@ article .icon {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
-  margin: 2rem 0;
+  margin: 2rem 5%;
   padding: 0.5rem;
 }
 
@@ -929,6 +931,16 @@ article .icon {
     align-content: center;
     flex-wrap: wrap;
     gap: 0;
+  }
+
+  /* contact */
+
+  #contact .contact-info-container p {
+    font-size: medium;
+  }
+
+  #contact .contact--container {
+    padding: 0;
   }
 }
 
