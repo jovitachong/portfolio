@@ -258,7 +258,7 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
   gap: 1rem;
   list-style: none;
 }
@@ -568,6 +568,7 @@ article .icon {
 .footer-title {
   font-size: 1.75rem;
   margin-bottom: 0.25rem;
+  margin-top: 2rem;
 }
 
 .footer--items>ul {
@@ -602,13 +603,6 @@ article .icon {
 
 .divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  /* margin: 0 5%; */
-  /*
-  height: 1.333px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  */
 }
 
 .footer--content--container {
@@ -921,6 +915,10 @@ article .icon {
     height: 200px;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  #profile .section__text {
+    width: 100%;
   }
 
   /* about */
